@@ -10,6 +10,8 @@ import FuckUtiles.Orgasm;
 import FuckUtiles.AwesomeOrgasm;
 import Entities.Chair;
 import Entities.Money;
+import interfaces.Product;
+import interfaces.Resourses;
 import interfaces.Worker;
 
 
@@ -55,6 +57,10 @@ public class Blacksmith implements Worker{
         
 
 }
+
+    public Product work(Resourses arg0) {
+       return makeChair();
+    }
 
     
 }

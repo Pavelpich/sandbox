@@ -11,5 +11,6 @@ package interfaces;
  */
 public interface Worker {
      
-    public interface Worker(worker worker);
+    public Product work(Resourses resourses);
+        
 }

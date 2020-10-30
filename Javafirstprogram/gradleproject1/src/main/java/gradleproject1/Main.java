@@ -6,6 +6,8 @@
 package gradleproject1;
 import Entities.Chair;
 import Entities.Money;
+import interfaces.Product;
+import interfaces.Worker;
 import java.security.MessageDigest;
 
 
@@ -23,16 +25,17 @@ public class Main {
         double a = new Double(5656465);
         double b = 345.42594;
         double c = a+b;
-        Blacksmith boba = new Blacksmith();
-        boolean d = boba.doubleExpression(a, b, c);
+        Worker boba = new Blacksmith();
+//        boolean d = boba.doubleExpression(a, b, c);
         
+        Product something = boba.work(arg0);
         
-        int f = Integer.MAX_VALUE+1;
-        System.out.println(d);
-        
-        Money money = new Money();
-        boba.makeChair(money);
-        Chair goodchair = boba.makeChair(money);
+//        int f = Integer.MAX_VALUE+1;
+//        System.out.println(d);
+//        
+//        Money money = new Money();
+//        boba.makeChair(money);
+//        Chair goodchair = boba.makeChair(money);
                                 
 //        MessageDigest md = MessageDigest.getInstance("MD5");
 //        byte[] digest = md.digest("abracadabra".getBytes("UTF-8"));

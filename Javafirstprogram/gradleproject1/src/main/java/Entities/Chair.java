@@ -5,11 +5,13 @@
  */
 package Entities;
 
+import interfaces.Product;
+
 /**
  *
  * @author pavel
  */
-public class Chair {
+public class Chair implements Product{
     public Chair (){
         System.out.println("Œ ");
     }
