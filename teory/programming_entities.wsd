@@ -1,0 +1,26 @@
+abstract abstract_class{}
+abstract _class{}
+abstract _interface{
+    type - intefrace name
+}
+abstract static_entity
+abstract variable{
+    name-id
+}
+abstract type
+
+class object{
+    address-id
+}
+
+static_entity <|-right- abstract_class
+abstract_class <|-down- _class
+abstract_class <|-right- _interface
+abstract_class o-up-> object
+
+ram -right-> system
+system *-right-> object
+object <|-up- dynamic_entity
+object -right-> type
+variable -down-> type
+_interface -up-> type
