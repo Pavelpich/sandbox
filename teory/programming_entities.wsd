@@ -1,6 +1,10 @@
-abstract abstract_class{}
-abstract _class{}
-abstract _interface{
+abstract abstract_class{
+    signature
+    body
+}
+abstract class{}
+
+abstract interface{
     type - intefrace name
 }
 abstract static_entity
@@ -13,14 +17,36 @@ class object{
     address-id
 }
 
+abstract method{}
+abstract signature{
+    access modyfier
+    static/dynamic
+    return type
+    name
+    args - variables
+}
+abstract body{}
+abstract static_method{}
+abstract dynamic_method{}
+abstract constructor{}
+
 static_entity <|-right- abstract_class
-abstract_class <|-down- _class
-abstract_class <|-right- _interface
-abstract_class o-up-> object
+    abstract_class <|-down- class
+        class o-down-> method
+            method -right-> signature
+            method -left-> body
+                method <|-down- static_method
+                    static_method <|-down- constructor
+                method <|-down- dynamic_method
+                    _object -up-> dynamic_method: vm
+    abstract_class <|-right- interface
+            interface o-down-> signature
+    abstract_class o-up-> object
 
 ram -right-> system
 system *-right-> object
 object <|-up- dynamic_entity
 object -right-> type
+variable -down-> object: vm
 variable -down-> type
-_interface -up-> type
+interface -up-> type
